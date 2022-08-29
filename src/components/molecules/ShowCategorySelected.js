@@ -23,8 +23,9 @@ const ShowCategorySelected = ({ name, searchInput }) => {
               if (searchInput === "") {
                 return val;
               } else if (
-                val.text.toLowerCase().includes(searchInput.toLowerCase())
+                val?.text?.toLowerCase().includes(searchInput.toLowerCase())
               ) {
+                console.log("val", val);
                 return val;
               }
             })
