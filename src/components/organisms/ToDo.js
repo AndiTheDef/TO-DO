@@ -22,7 +22,7 @@ const ToDoForm = () => {
     // localStorage.setItem("learn", JSON.stringify([{}]));
     // localStorage.setItem("work", JSON.stringify([{}]));
     handeOnClick(valueBtn);
-  }, []);
+  }, [valueBtn]);
 
   const onSubmit = (e) => {
     e.preventDefault();
