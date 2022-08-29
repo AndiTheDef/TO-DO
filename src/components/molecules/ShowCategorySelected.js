@@ -22,6 +22,8 @@ const ShowCategorySelected = ({ name, searchInput }) => {
             .filter((val) => {
               if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
                 return val;
+              } else {
+                return val;
               }
             })
             .map((item) => (
@@ -51,6 +53,8 @@ const ShowCategorySelected = ({ name, searchInput }) => {
         ? (fitnesParser || [])
             .filter((val) => {
               if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
+                return val;
+              } else {
                 return val;
               }
             })
@@ -84,6 +88,8 @@ const ShowCategorySelected = ({ name, searchInput }) => {
             .filter((val) => {
               if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
                 return val;
+              } else {
+                return val;
               }
             })
             .map((item) => (
@@ -113,6 +119,8 @@ const ShowCategorySelected = ({ name, searchInput }) => {
         ? (learnParser || [])
             .filter((val) => {
               if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
+                return val;
+              } else {
                 return val;
               }
             })
