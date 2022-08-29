@@ -1,0 +1,25 @@
+/* import base styles */
+@import './base/reset.scss';
+
+/* import pages styles */
+@import './pages/index.scss';
+@import './pages/TickList.scss';
+
+/* import variables style */
+@import './abstracts/_variables.scss';
+
+/* import atoms styles */
+@import '../components/atoms/index.scss';
+
+/* import molecules styles */
+@import '../components/molecules/index.scss';
+
+/* import organisms styles */
+@import '../components/organisms/index.scss';
+
+/* import templates styles */
+@import '../components/templates/index.scss';
+
+@import '../sass/layout/header';
+
+// @import '../pages/Authentication/signinpage.css';

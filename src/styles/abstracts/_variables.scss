@@ -1,0 +1,103 @@
+/// Vertical rhythm baseline
+/// @type Length
+$vertical-rhythm-baseline: 1.5rem;
+
+/// Regular font stack
+/// @type List
+$text-font-stack: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica',
+  'Arial', sans-serif;
+
+/// Code font stack
+/// @type List
+$code-font-stack: 'Source Code Pro', 'Courier New', monospace;
+
+/// White
+/// @type Color
+$white: #ffffff;
+
+/// Black
+/// @type Color
+$black: #000000;
+
+/// Buddha gold
+/// @type Color
+$buddha-gold: #cb9b00;
+
+/// Japanese laurel
+/// @type Color
+$japanese-laurel: #209303;
+
+/// Pastel green
+/// @type Color
+$pastel-green: #7ddf64;
+
+/// Crimson
+/// @type Color
+$crimson: #ef233c;
+
+/// Buttercup
+/// @type Color
+$buttercup: #f5bf0e;
+
+/// Red
+/// @type Color
+$red: #ff0000;
+
+/// Gray
+/// @type Color
+$gray: #aab4bd;
+
+/// Gallery
+/// @type Color
+$gallery: #ededed;
+
+/// Concrete
+/// @type Color
+$concrete: #f2f2f2;
+
+/// Alabaster
+/// @type Color
+$alabaster: #f8f8f8;
+
+/// Persian
+/// @type Color
+$persian: #1439c6;
+
+/// Blue
+/// @type Color
+$blue: #2c58ff;
+
+/// Persian Blue
+/// @type Color
+$persian-blue: #1439c6;
+
+/// Nile blue
+/// @type Color
+$nile-blue: #1a374d;
+
+/// Ebony clay
+/// @type Color
+$ebony-clay: #242e3c;
+
+/// Blue bayoux
+/// @type Color
+$blue-bayoux: #506576;
+
+/// Blue bayoux
+/// @type Color
+$concrete: #f2f2f2;
+
+/// Oxford blue
+/// @type Color
+$oxford-blue: #36404e;
+
+/// Breakpoints
+/// @type Map
+$breakpoints: (
+  'small': 600px,
+  'medium': 801px,
+  'large': 975px,
+);
+
+/// Fonts
+$font-segoe-ui-variable: 'Segoe UI Variable';
