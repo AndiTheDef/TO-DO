@@ -61,7 +61,7 @@ const ShowCategorySelected = ({ name, searchInput }) => {
               if (searchInput === "") {
                 return val;
               } else if (
-                val.text.toLowerCase().includes(searchInput.toLowerCase())
+                val.text?.toLowerCase().includes(searchInput.toLowerCase())
               ) {
                 return val;
               }
@@ -100,7 +100,7 @@ const ShowCategorySelected = ({ name, searchInput }) => {
               if (searchInput === "") {
                 return val;
               } else if (
-                val.text.toLowerCase().includes(searchInput.toLowerCase())
+                val.text?.toLowerCase().includes(searchInput.toLowerCase())
               ) {
                 return val;
               }
@@ -138,7 +138,7 @@ const ShowCategorySelected = ({ name, searchInput }) => {
               if (searchInput === "") {
                 return val;
               } else if (
-                val.text.toLowerCase().includes(searchInput.toLowerCase())
+                val.text?.toLowerCase().includes(searchInput.toLowerCase())
               ) {
                 return val;
               }
