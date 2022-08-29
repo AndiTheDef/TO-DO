@@ -107,7 +107,6 @@ const ShowCategorySelected = ({ name, searchInput }) => {
             })
             .map((item) => {
               if (Object.keys(item).length === 0) return;
-
               return (
                 <p key={item.id}>
                   {item.text}
@@ -144,6 +143,7 @@ const ShowCategorySelected = ({ name, searchInput }) => {
               }
             })
             .map((item) => {
+              if (Object.keys(item).length === 0) return;
               return (
                 <p key={item.id}>
                   {item.text}
