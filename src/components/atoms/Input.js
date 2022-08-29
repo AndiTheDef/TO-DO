@@ -1,10 +1,10 @@
 import React from "react";
 
-const Input = ({ onchange, input }) => (
+const Input = ({ onchange, input, placeholder }) => (
   <input
     onChange={onchange}
     type="text"
-    placeholder="Add Tasks"
+    placeholder={placeholder}
     value={input}
   />
 );

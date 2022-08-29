@@ -1,20 +1,144 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const ShowCategorySelected = ({ name }) => {
+const ShowCategorySelected = ({ name, searchInput }) => {
+  const [changed, setChanged] = useState(false);
   const foodParser = JSON.parse(localStorage.getItem("food"));
   const fitnesParser = JSON.parse(localStorage.getItem("fitnes"));
   const workParser = JSON.parse(localStorage.getItem("work"));
   const learnParser = JSON.parse(localStorage.getItem("learn"));
+
+  const removeTodo = (id, array, localStorageText) => {
+    setChanged(!changed);
+    const removeArrFood = [...array].filter((todo) => todo.id !== id);
+    localStorage.setItem(localStorageText, JSON.stringify(removeArrFood));
+  };
+
+  useEffect(() => {}, [changed]);
+
   return (
-    <div>
+    <div className="to-do-wrapper">
       {name === "food"
-        ? (foodParser || []).map((item) => <p> {item.text}</p>)
+        ? (foodParser || [])
+            .filter((val) => {
+              if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
+                return val;
+              }
+            })
+            .map((item) => (
+              <p>
+                {item.text}
+                <span onClick={() => removeTodo(item.id, foodParser, "food")}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="feather feather-x-circle"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                  </svg>
+                </span>
+              </p>
+            ))
         : name === "fitnes"
-        ? (fitnesParser || []).map((item) => <p> {item.text}</p>)
+        ? (fitnesParser || [])
+            .filter((val) => {
+              if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
+                return val;
+              }
+            })
+            .map((item) => (
+              <p>
+                {item.text}
+                <span
+                  onClick={() => removeTodo(item.id, fitnesParser, "fitnes")}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="feather feather-x-circle"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                  </svg>
+                </span>
+              </p>
+            ))
         : name === "work"
-        ? (workParser || []).map((item) => <p> {item.text}</p>)
+        ? (workParser || [])
+            .filter((val) => {
+              if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
+                return val;
+              }
+            })
+            .map((item) => (
+              <p>
+                {item.text}
+                <span onClick={() => removeTodo(item.id, workParser, "work")}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="feather feather-x-circle"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                  </svg>
+                </span>
+              </p>
+            ))
         : name === "learn"
-        ? (learnParser || []).map((item) => <p> {item.text}</p>)
+        ? (learnParser || [])
+            .filter((val) => {
+              if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
+                return val;
+              }
+            })
+            .map((item) => (
+              <p>
+                {item.text}
+                <span onClick={() => removeTodo(item.id, learnParser, "learn")}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="feather feather-x-circle"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                  </svg>
+                </span>
+              </p>
+            ))
         : ""}
     </div>
   );

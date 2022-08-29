@@ -7,6 +7,7 @@ import ShowCategorySelected from "../molecules/ShowCategorySelected";
 const ToDoForm = () => {
   const [toDo, setToDo] = useState([]);
   const [input, setInput] = useState("");
+  const [searchInput, setSearchInput] = useState("");
   const [selectValue, setSelectValue] = useState("food");
 
   const [valueBtn, saveValueBtn] = useState("food");
@@ -17,10 +18,6 @@ const ToDoForm = () => {
   const handleOnChange = (e) => setSelectValue(e);
 
   useEffect(() => {
-    // localStorage.setItem("food", JSON.stringify([{}]));
-    // localStorage.setItem("fitnes", JSON.stringify([{}]));
-    // localStorage.setItem("learn", JSON.stringify([{}]));
-    // localStorage.setItem("work", JSON.stringify([{}]));
     handeOnClick(valueBtn);
   }, [valueBtn]);
 
@@ -44,13 +41,25 @@ const ToDoForm = () => {
         ? [{}]
         : JSON.parse(localStorage.getItem("work"));
 
-    const food = [{ text: toDo }, ...watchFood];
+    const food = [
+      { id: Math.floor(Math.random() * 100000), text: toDo },
+      ...watchFood,
+    ];
 
-    const fitnes = [{ text: toDo }, ...watchFitnes];
+    const fitnes = [
+      { id: Math.floor(Math.random() * 100000), text: toDo },
+      ...watchFitnes,
+    ];
 
-    const learn = [{ text: toDo }, ...watchLearn];
+    const learn = [
+      { id: Math.floor(Math.random() * 100000), text: toDo },
+      ...watchLearn,
+    ];
 
-    const work = [{ text: toDo }, ...watchWork];
+    const work = [
+      { id: Math.floor(Math.random() * 100000), text: toDo },
+      ...watchWork,
+    ];
 
     if (selectValue === "food") {
       localStorage.setItem("food", JSON.stringify(food));
@@ -74,9 +83,20 @@ const ToDoForm = () => {
     <div>
       <div className="container">
         <div className="newtask">
+          <input
+            placeholder="Search here..."
+            value={searchInput}
+            onChange={(e) => {
+              setSearchInput(e.target.value);
+            }}
+          />
           <form onSubmit={onSubmit}>
             <div className="form-wrapper">
-              <Input onchange={onchange} input={input} />
+              <Input
+                placeholder="Add Tasks"
+                onchange={onchange}
+                input={input}
+              />
               <Select
                 size="large"
                 onChange={handleOnChange}
@@ -100,7 +120,7 @@ const ToDoForm = () => {
             <Button onClick={handeOnClick("learn")}>Learn</Button>
             <Button onClick={handeOnClick("work")}>Work</Button>
           </div>
-          {<ShowCategorySelected name={valueBtn} />}
+          {<ShowCategorySelected name={valueBtn} searchInput={searchInput} />}
         </div>
       </div>
     </div>
