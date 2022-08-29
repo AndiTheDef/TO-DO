@@ -25,7 +25,7 @@ const ShowCategorySelected = ({ name, searchInput }) => {
               }
             })
             .map((item) => (
-              <p>
+              <p key={item.id}>
                 {item.text}
                 <span onClick={() => removeTodo(item.id, foodParser, "food")}>
                   <svg
@@ -35,9 +35,9 @@ const ShowCategorySelected = ({ name, searchInput }) => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="feather feather-x-circle"
                   >
                     <circle cx="12" cy="12" r="10"></circle>
@@ -55,7 +55,7 @@ const ShowCategorySelected = ({ name, searchInput }) => {
               }
             })
             .map((item) => (
-              <p>
+              <p key={item.id}>
                 {item.text}
                 <span
                   onClick={() => removeTodo(item.id, fitnesParser, "fitnes")}
@@ -67,9 +67,9 @@ const ShowCategorySelected = ({ name, searchInput }) => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="feather feather-x-circle"
                   >
                     <circle cx="12" cy="12" r="10"></circle>
@@ -87,7 +87,7 @@ const ShowCategorySelected = ({ name, searchInput }) => {
               }
             })
             .map((item) => (
-              <p>
+              <p key={item.id}>
                 {item.text}
                 <span onClick={() => removeTodo(item.id, workParser, "work")}>
                   <svg
@@ -97,9 +97,9 @@ const ShowCategorySelected = ({ name, searchInput }) => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="feather feather-x-circle"
                   >
                     <circle cx="12" cy="12" r="10"></circle>
@@ -117,7 +117,7 @@ const ShowCategorySelected = ({ name, searchInput }) => {
               }
             })
             .map((item) => (
-              <p>
+              <p key={item.id}>
                 {item.text}
                 <span onClick={() => removeTodo(item.id, learnParser, "learn")}>
                   <svg
@@ -127,9 +127,9 @@ const ShowCategorySelected = ({ name, searchInput }) => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="feather feather-x-circle"
                   >
                     <circle cx="12" cy="12" r="10"></circle>
