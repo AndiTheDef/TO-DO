@@ -20,9 +20,11 @@ const ShowCategorySelected = ({ name, searchInput }) => {
       {name === "food"
         ? (foodParser || [])
             .filter((val) => {
-              if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
+              if (searchInput === "") {
                 return val;
-              } else {
+              } else if (
+                val.text.toLowerCase().includes(searchInput.toLowerCase())
+              ) {
                 return val;
               }
             })
@@ -52,9 +54,11 @@ const ShowCategorySelected = ({ name, searchInput }) => {
         : name === "fitnes"
         ? (fitnesParser || [])
             .filter((val) => {
-              if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
+              if (searchInput === "") {
                 return val;
-              } else {
+              } else if (
+                val.text.toLowerCase().includes(searchInput.toLowerCase())
+              ) {
                 return val;
               }
             })
@@ -86,9 +90,11 @@ const ShowCategorySelected = ({ name, searchInput }) => {
         : name === "work"
         ? (workParser || [])
             .filter((val) => {
-              if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
+              if (searchInput === "") {
                 return val;
-              } else {
+              } else if (
+                val.text.toLowerCase().includes(searchInput.toLowerCase())
+              ) {
                 return val;
               }
             })
@@ -118,9 +124,11 @@ const ShowCategorySelected = ({ name, searchInput }) => {
         : name === "learn"
         ? (learnParser || [])
             .filter((val) => {
-              if (val.text.toLowerCase().includes(searchInput.toLowerCase())) {
+              if (searchInput === "") {
                 return val;
-              } else {
+              } else if (
+                val.text.toLowerCase().includes(searchInput.toLowerCase())
+              ) {
                 return val;
               }
             })
