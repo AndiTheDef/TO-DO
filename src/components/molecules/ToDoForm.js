@@ -12,7 +12,6 @@ const ToDo = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-
     const newTodos = [toDo, ...toDoList];
     setToDoList(newTodos);
     setInput("");

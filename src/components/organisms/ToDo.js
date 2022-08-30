@@ -23,6 +23,9 @@ const ToDoForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if (input === "") {
+      return;
+    }
     setInput("");
     const watchFood =
       JSON.parse(localStorage.getItem("food")) == null
